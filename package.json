@@ -235,7 +235,10 @@
     "yocto-queue": "^0.1.0"
   },
   "scripts": {
-      "start": "ts-node src/server.ts"
+      "start": "ts-node src/server.ts",
+      "test": "jest",
+      "test:watch": "jest --watch",
+      "test:coverage": "jest --coverage"
   },
   "repository": {
     "type": "git",
