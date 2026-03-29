@@ -1,9 +1,9 @@
-import { db } from "../../../../config/firebaseConfig";
+import {db} from "../../../config/firebaseConfig";
 import { FirestoreDataTypes } from "../types/firestore";
 
 interface FieldValuePair {
     fieldName: string;
-    fieldValue: FirestoreDataTypes;
+    fieldValue: FirestoreDataTypes;}
 
 /**
  * Executes a series of operations within a Firestore transaction.

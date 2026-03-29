@@ -2,7 +2,7 @@ import { Event } from "../src/api/v1/models/eventModel";
 import * as eventService from "../src/api/v1/services/eventService";
 import * as firestoreRepository from "../src/api/v1/repositories/firestoreRepository";
 
-jest.mock("../src/api/v1/repositories/firestoreRepository");
+jest.mock("../src/api/v1/repositories/firebaseRepository");
 
 describe("Event Service", () => {
     beforeEach(() => {
@@ -71,7 +71,7 @@ describe("createEvent", () => {
 
         
     });
-    escribe("getEventById", () => {
+    describe("getEventById", () => {
         it("should return event by id successfully", async (): Promise<void> => {
             // Arrange
             const mockDoc: {
