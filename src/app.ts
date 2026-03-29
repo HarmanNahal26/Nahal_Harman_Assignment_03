@@ -5,18 +5,21 @@ import dotenv from "dotenv";
 // Load environment variables BEFORE your internal imports!
 dotenv.config();
 
+import { getHelmetConfig } from "./config/helmetConfig";
 import healthRoutes from "./api/v1/routes/healthRoutes";
 import eventRoutes from "./api/v1/routes/eventRoutes";
 
 // Initialize Express application
 const app: Express = express();
 
-// Middleware
+// Security middleware
+app.use(getHelmetConfig());
+
+// Body parsing middleware
 app.use(express.json());
 
 
-
-// Define a route
+// Routes
 app.use("/api/v1", healthRoutes);
 app.use("/api/v1/events", eventRoutes);
 
