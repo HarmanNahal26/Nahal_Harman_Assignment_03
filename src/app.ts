@@ -1,4 +1,10 @@
 import express, { Express } from "express";
+
+import dotenv from "dotenv";
+
+// Load environment variables BEFORE your internal imports!
+dotenv.config();
+
 import healthRoutes from "./api/v1/routes/healthRoutes";
 import eventRoutes from "./api/v1/routes/eventRoutes";
 
