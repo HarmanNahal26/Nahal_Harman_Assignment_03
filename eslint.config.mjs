@@ -48,6 +48,9 @@ export default tseslint.config(
             // Allow ES6 imports with CommonJS output
             "@typescript-eslint/no-require-imports": "off",
             "@typescript-eslint/no-var-requires": "off",
+            // Disable rules that conflict with our setup
+            "@typescript-eslint/no-explicit-any": "off",
+            "preserve-caught-error": "off",
         },
     }
 );
